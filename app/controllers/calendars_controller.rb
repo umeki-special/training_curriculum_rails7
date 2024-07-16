@@ -12,6 +12,10 @@ class CalendarsController < ApplicationController
     redirect_to action: :index
   end
 
+  def plan_params
+    params.require(:plan).permit(:date, :plan)
+  end
+
   private
 
   def plan_params
